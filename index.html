@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Resume</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin:0;
+            padding:0;
+            background-color: whitesmoke;
+        }
+         header {
+            background-color:black;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+         }
+          .header-content h1 {
+            font-size: 2.5rem;
+          }
+
+        .porfile-picture {
+            width: 100px;
+            height:100px;
+            border-radius: 75%;
+            object-fit: cover;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+        }
+
+        nav{
+            background-color:black;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding:0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .section-content {
+             background-color: #fff;
+             padding: 2rem;
+             margin: 1rem;
+             border-radius: 20px;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    
+        </style>
+<body>
+    <header>
+        <div class="header-session">
+            <img src="image.jpg" altr="Profile Picture" class="profile picture">
+            <h1>Alwin John</h1>
+        </div>
+    </header>
+    <nav> 
+        <ul>
+            <li><a href="#About">AboutMe</a></li>
+            <br>
+            <br>
+            <li><a href="#Education">Education</a></li>
+            <br>
+            <br>
+            <li><a href="#Skill">Skill</a></li>
+            <br>
+            <br>
+        </ul>
+    </nav>
+    <section id="About">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I am a Front-end developr..</p>
+        </div>    
+    </section>
+
+    <section id="Education">
+        <div class="section-content">
+            <h2>BSC IT</h2>
+            <p>KSG college of art and science</p>
+        </div>
+    </section>
+
+    <section id="Skill">
+        <div class="section-content">
+            <h2>Skill</h2>
+            <ul>
+                <li>Programming</li>
+                <li>Front-end developr</li>
+                <li>Python</li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        // smooth scrolling to section when clicking on navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
+            anchor.addEventlistener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>        
+</body>
+</html>
